@@ -46,7 +46,7 @@ Finally, you can write some fancy code examples which are `runnable`:
 ##### match
 
 Type: `RegExp`<br>
-Default: <code>/^\`{4}.*?\n([\s\S]*?)\n\`{4}/gm</code>
+Default: <code>/^\`{4}.\*?\n([\s\S]\*?)\n\`{4}/gm</code>
 
 The regular express we use to find runnable code.
 
