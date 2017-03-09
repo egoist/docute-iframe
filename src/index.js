@@ -16,7 +16,7 @@ export default function ({
   return ({ beforeParse }) => {
     beforeParse(raw => {
       return raw.replace(match, (_, p1) => {
-        return `<iframe sandbox="${sandbox}" srcdoc="${escapeHtml(prepend)}${escapeHtml(p1)}${escapeHtml(append)}"></iframe>`
+        return `<iframe style="border:none" sandbox="${sandbox}" srcdoc="${escapeHtml(prepend)}${escapeHtml(p1)}${escapeHtml(append)}"></iframe>`
       })
     })
   }
