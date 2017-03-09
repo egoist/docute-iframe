@@ -1,3 +1,4 @@
 self.$config = {
-  plugins: [docuteIframe()]
+  plugins: [docuteIframe()],
+  repo: 'egoist/docute-iframe'
 }
