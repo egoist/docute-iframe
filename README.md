@@ -41,6 +41,8 @@ Finally, you can write some fancy code examples which are `runnable`:
 
 If you want to support IE/Edge, please include a [polyfill](https://github.com/jugglinmike/srcdoc-polyfill) for iframe `srcdoc`
 
+## API
+
 ### docuteIframe([options])
 
 #### options
