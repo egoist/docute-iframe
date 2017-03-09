@@ -37,7 +37,9 @@ Finally, you can write some fancy code examples which are `runnable`:
 
 **Note:** It's similar to gfm code blocks, which use triple backticks, but here you need to use **4 backticks** to mark it as runnable code while still have syntax highlight in your editor.
 
-## API
+## Browser support
+
+If you want to support IE/Edge, please include a [polyfill](https://github.com/jugglinmike/srcdoc-polyfill) for iframe `srcdoc`
 
 ### docuteIframe([options])
 

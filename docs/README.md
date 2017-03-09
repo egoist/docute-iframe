@@ -4,7 +4,8 @@ I just want to demonstrate its usage.
 
 ````html
 <div id="example">
-  The time is: <time style="color: red">???</time>
+  The time is: <br>
+  <time style="color: red; font-size: 3rem">???</time>
 </div>
 
 <script>
