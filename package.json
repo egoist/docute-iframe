@@ -1,0 +1,29 @@
+{
+  "name": "docute-iframe",
+  "version": "0.0.0",
+  "description": "Run code block in an iframe for docute docs",
+  "repository": {
+    "url": "egoist/docute-iframe",
+    "type": "git"
+  },
+  "main": "dist/docute-iframe.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo 'no tests!' && npm run lint && npm run build",
+    "lint": "xo",
+    "build": "bili --name docute-iframe --module-name docuteIframe --format umd --compress"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-rem": "^3.0.0",
+    "xo": "^0.17.1",
+    "bili": "^0.14.0"
+  },
+  "xo": {
+    "extends": "rem",
+    "esnext": true
+  }
+}
