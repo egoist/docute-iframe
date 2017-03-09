@@ -52,7 +52,7 @@ If you want to support IE/Edge, please include a [polyfill](https://github.com/j
 Type: `RegExp`<br>
 Default: <code>/^\`{4}(.\*?)\n([\s\S]\*?)\n\`{4}/gm</code>
 
-The regular express we use to find runnable code.
+The regular expression we use to find runnable code.
 
 ##### showSourceCode
 
