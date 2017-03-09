@@ -37,20 +37,20 @@ Finally, you can write some fancy code examples which are `runnable`:
 
 **Note:** It's similar to gfm code blocks, which use triple backticks, but here you need to use **4 backticks** to mark it as runnable code while still have syntax highlight in your editor.
 
-### API
+## API
 
-#### docuteIframe([options])
+### docuteIframe([options])
 
-##### options
+#### options
 
-###### match
+##### match
 
 Type: `RegExp`<br>
 Default: <code>/^\`{4}.*?\n([\s\S]*?)\n\`{4}/gm</code>
 
 The regular express we use to find runnable code.
 
-###### prepend
+##### prepend
 
 Type: `string`
 
@@ -64,11 +64,11 @@ docuteIframe({
 
 Then you can use `Vue` in your code.
 
-###### append
+##### append
 
 Same as `prepend` but append to iframe body.
 
-###### sandbox
+##### sandbox
 
 Type: `string`<br>
 Default: `allow-scripts allow-same-origin`
