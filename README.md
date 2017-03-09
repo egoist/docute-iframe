@@ -11,7 +11,7 @@ A docute plugin to run code in docs with an iframe.
 Include the scripts before your config file:
 
 ```html
-<script src="https://unpkg.com/docute-iframe"><script>
+<script src="https://unpkg.com/docute-iframe"></script>
 ```
 
 Then in your config file:
