@@ -24,6 +24,7 @@
   },
   "xo": {
     "extends": "rem",
-    "esnext": true
+    "esnext": true,
+    "ignores": ["docs/**/*"]
   }
 }
