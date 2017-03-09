@@ -1,6 +1,6 @@
-# docute-code-iframe
+# docute-iframe
 
-[![NPM version](https://img.shields.io/npm/v/docute-code-iframe.svg?style=flat)](https://npmjs.com/package/docute-code-iframe) [![NPM downloads](https://img.shields.io/npm/dm/docute-code-iframe.svg?style=flat)](https://npmjs.com/package/docute-code-iframe) [![Build Status](https://img.shields.io/circleci/project/egoist/docute-code-iframe/master.svg?style=flat)](https://circleci.com/gh/egoist/docute-code-iframe) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
+[![NPM version](https://img.shields.io/npm/v/docute-iframe.svg?style=flat)](https://npmjs.com/package/docute-iframe) [![NPM downloads](https://img.shields.io/npm/dm/docute-iframe.svg?style=flat)](https://npmjs.com/package/docute-iframe) [![Build Status](https://img.shields.io/circleci/project/egoist/docute-iframe/master.svg?style=flat)](https://circleci.com/gh/egoist/docute-iframe) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
 
 A docute plugin to run code in docs with an iframe.
 
@@ -86,7 +86,7 @@ The `sandbox` attribute of `iframe` element.
 
 ## Author
 
-**docute-code-iframe** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by egoist with help from contributors ([list](https://github.com/egoist/docute-code-iframe/contributors)).
+**docute-iframe** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by egoist with help from contributors ([list](https://github.com/egoist/docute-iframe/contributors)).
 
 > [egoistian.com](https://egoistian.com) · GitHub [@egoist](https://github.com/egoist) · Twitter [@rem_rin_rin](https://twitter.com/rem_rin_rin)
