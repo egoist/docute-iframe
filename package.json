@@ -1,6 +1,6 @@
 {
   "name": "docute-iframe",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Run code block in an iframe for docute docs",
   "repository": {
     "url": "egoist/docute-iframe",
