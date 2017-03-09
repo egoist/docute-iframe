@@ -23,7 +23,7 @@ export default function ({
           result += `\n\n\`\`\`${p1}\n${p2}\n\`\`\`\n\n`
         }
 
-        result += `<iframe class="code-iframe" frameborder="0" style="border:1px solid #eee" sandbox="${sandbox}" srcdoc="${escapeHtml(prepend)}${escapeHtml(p2)}${escapeHtml(append)}"></iframe>`
+        result += `<iframe class="code-iframe" frameborder="0" width="100%" style="border:1px solid #eee" sandbox="${sandbox}" srcdoc="${escapeHtml(prepend)}${escapeHtml(p2)}${escapeHtml(append)}"></iframe>`
 
         return result
       })
