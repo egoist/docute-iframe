@@ -9,8 +9,6 @@ I just want to demonstrate its usage.
   <button @click="dec">dec</button>
 </div>
 
-<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-
 <script>
   const vm = new Vue({
     el: '#example',
