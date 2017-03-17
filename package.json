@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo 'no tests!' && npm run lint && npm run build",
     "lint": "xo",
-    "build": "bili --name docute-iframe --module-name docuteIframe --format umd --compress"
+    "build": "bili --name docute-iframe --module-name docuteIframe --format umd --compress",
+    "watch": "bili --name docute-iframe --module-name docuteIframe --format umd --watch"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
@@ -27,6 +28,9 @@
     "esnext": true,
     "ignores": [
       "docs/**/*"
+    ],
+    "envs": [
+      "browser"
     ]
   }
 }
