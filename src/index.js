@@ -2,13 +2,21 @@ function random() {
   return Math.random().toString().slice(2, 10)
 }
 
+function defaultParseContent(lang, content) {
+  if (lang === 'js' || lang === 'javascript') {
+    return `<script>${content}</script>`
+  }
+  return content
+}
+
 export default function ({
   sandbox = 'allow-modals allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts',
   prepend = '',
   append = '',
   match = /^`{4}(.*?)\n([\s\S]*?)\n`{4}/gm,
   showSourceCode = true,
-  surfaceAPI = ['Prism', 'fetch']
+  surfaceAPI = ['Prism', 'fetch'],
+  parseContent = defaultParseContent
 } = {}) {
   return ({ beforeParse, event }) => {
     const stack = []
@@ -28,7 +36,7 @@ export default function ({
         stack.push({
           id,
           hash,
-          content: prepend + p2 + append
+          content: prepend + parseContent(p1, p2) + append
         })
 
         return result
