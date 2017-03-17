@@ -14,14 +14,14 @@ Include the scripts before your config file:
 <script src="https://unpkg.com/docute-iframe"></script>
 ```
 
-Then in your config file:
+Then activate the plugin:
 
 ```js
-self.$config = {
+docute.init({
   plugins: [
     docuteIframe()
   ]
-}
+})
 ```
 
 Finally, you can write some fancy code examples which are `runnable`:
