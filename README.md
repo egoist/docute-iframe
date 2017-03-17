@@ -78,7 +78,7 @@ Same as `prepend` but append to iframe body.
 ##### sandbox
 
 Type: `string`<br>
-Default: `allow-scripts allow-same-origin`
+Default: `allow-modals allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts`
 
 The `sandbox` attribute of `iframe` element.
 
