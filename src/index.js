@@ -1,20 +1,18 @@
+function random() {
+  return Math.random().toString().slice(2, 10)
+}
+
 export default function ({
-  sandbox = 'allow-scripts allow-same-origin',
+  sandbox = 'allow-modals allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts',
   prepend = '',
   append = '',
   match = /^`{4}(.*?)\n([\s\S]*?)\n`{4}/gm,
-  showSourceCode = true
+  showSourceCode = true,
+  surfaceAPI = ['Prism', 'fetch']
 } = {}) {
-  function escapeHtml(text) {
-    return text
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;')
-  }
+  return ({ beforeParse, event }) => {
+    const stack = []
 
-  return ({ beforeParse }) => {
     beforeParse(raw => {
       return raw.replace(match, (_, p1, p2) => {
         let result = ''
@@ -23,10 +21,45 @@ export default function ({
           result += `\n\n\`\`\`${p1}\n${p2}\n\`\`\`\n\n`
         }
 
-        result += `<iframe class="code-iframe" frameborder="0" width="100%" style="border:1px solid #eee" sandbox="${sandbox}" srcdoc="${escapeHtml(prepend)}${escapeHtml(p2)}${escapeHtml(append)}"></iframe>`
+        const hash = random()
+        const id = `holder-${hash}`
+        result += `<div id="${id}"></div>`
+
+        stack.push({
+          id,
+          hash,
+          content: prepend + p2 + append
+        })
 
         return result
       })
+    })
+
+    event.on('content:updated', () => {
+      while (stack.length) {
+        const node = stack.shift()
+        const holder = document.getElementById(node.id)
+        if (!holder) continue
+
+        const iframe = document.createElement('iframe')
+        iframe.src = 'about:self'
+        iframe.className = 'code-iframe'
+        iframe.frameBorder = 0
+        iframe.width = '100%'
+        iframe.sandbox = sandbox
+        iframe.style = 'border:1px solid #eee'
+        iframe.id = `iframe-${node.hash}`
+
+        holder.parentNode.replaceChild(iframe, holder)
+        // surface some API inside the iframe
+        for (const name of surfaceAPI) {
+          iframe.contentWindow[name] = window[name]
+        }
+
+        const doc = iframe.contentWindow.document
+        doc.open().write(node.content)
+        doc.close()
+      }
     })
   }
 }

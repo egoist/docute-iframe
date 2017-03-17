@@ -37,10 +37,6 @@ Finally, you can write some fancy code examples which are `runnable`:
 
 **Note:** It's similar to gfm code blocks, which use triple backticks, but here you need to use **4 backticks** to mark it as runnable code while still have syntax highlight in your editor.
 
-## Browser support
-
-If you want to support IE/Edge, please include a [polyfill](https://github.com/jugglinmike/srcdoc-polyfill) for iframe `srcdoc`
-
 ## API
 
 ### docuteIframe([options])
@@ -82,9 +78,16 @@ Same as `prepend` but append to iframe body.
 ##### sandbox
 
 Type: `string`<br>
-Default: `allow-scripts allow-same-origin`
+Default: `allow-modals allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts`
 
 The `sandbox` attribute of `iframe` element.
+
+##### surfaceAPI
+
+Type: `Array`<br>
+Default: `['Prism', 'fetch']`
+
+Deliver some global variables of parent window to iframe, don't deliver variables that rely on `window.document`, since the parent window and iframe have different `document.`
 
 ## Contributing
 
