@@ -82,6 +82,13 @@ Default: `allow-modals allow-forms allow-pointer-lock allow-popups allow-same-or
 
 The `sandbox` attribute of `iframe` element.
 
+##### surfaceAPI
+
+Type: `Array`<br>
+Default: `['Prism', 'fetch']`
+
+Deliver some global variables of parent window to iframe, don't deliver variables that rely on `window.document`, since the parent window and iframe have different `document.`
+
 ## Contributing
 
 1. Fork it!
