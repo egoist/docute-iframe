@@ -37,7 +37,7 @@ Finally, you can write some fancy code examples which are `runnable`:
 
 **Note:** It's similar to gfm code blocks, which use triple backticks, but here you need to use **4 backticks** to mark it as runnable code while still have syntax highlight in your editor.
 
-If the `language` of code block is `js` or `javascript`, it will be automatically wrapped in `<script>` tag and inserted into iframe body, you can [customize it](#parseContent) though.
+If the `language` of code block is `js` or `javascript`, it will be automatically wrapped in `<script>` tag and inserted into iframe body, you can [customize it](#parsecontent) though.
 
 ## API
 
