@@ -31,7 +31,7 @@ Finally, you can write some fancy code examples which are `runnable`:
     ````html
     <div id="example"></div>
     <script>
-      document.getElementByid('example').innerHTML = '<strong>it works</strong>'
+      document.getElementById('example').innerHTML = '<strong>it works</strong>'
     </script>
     ````
 
