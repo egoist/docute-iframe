@@ -48,7 +48,7 @@ If the `language` of code block is `js` or `javascript`, it will be automaticall
 ##### match
 
 Type: `RegExp`<br>
-Default: <code>/^\`{4}(.\*?)\n([\s\S]\*?)\n\`{4}/gm</code>
+Default: <code>/^\`{4}(.\*?)[\n\r]+([\s\S]\*?)[\n\r]+\`{4}/gm</code>
 
 The regular expression we use to find runnable code.
 

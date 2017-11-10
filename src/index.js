@@ -13,7 +13,7 @@ export default function ({
   sandbox = 'allow-modals allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts',
   prepend = '',
   append = '',
-  match = /^`{4}(.*?)\n([\s\S]*?)\n`{4}/gm,
+  match = /^`{4}(.*?)[\n\r]+([\s\S]*?)[\n\r]+`{4}/gm,
   showSourceCode = true,
   surfaceAPI = ['Prism', 'fetch'],
   parseContent = defaultParseContent
